@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+  </head>
+  <body>
+    <script>
+
+        var rockpaperscissor = ["r", "p", "s"];
+        var myScore = 0
+        var comScore = 0
+
+        // loop statement 
+        for (var i = 0; i < 10 ; i++) {
+            myChoice = prompt("Choose r, p, or s")
+            computerNumber = Math.floor(Math.random() * 3)
+            computerChoice = rockpaperscissor[computerNumber]
+            console.log(myChoice)
+            console.log(computerChoice)
+        //if there is a tie
+
+        if (myChoice === computerChoice) {
+            alert("You Tied, your score is " + myScore + " and computer score is " + comScore);}
+
+        //winners and losers
+
+        else if (myChoice === "r" && computerChoice === "p") {
+            comScore = comScore + 1
+            alert("you lose, your score is " + myScore + " and computer score is " + comScore)}
+
+        else if (myChoice === "r" && computerChoice === "s") {
+            myScore = myScore + 1
+            alert("you win, your score is " + myScore + " and computer score is " + comScore)}
+
+        else if (myChoice === "s" && computerChoice === "r") {
+            comScore = comScore + 1
+            alert("you lose, your score is " + myScore + " and computer score is " + comScore)}
+
+        else if (myChoice === "s" && computerChoice === "p") {
+            myScore = myScore + 1
+            alert("you win, your score is " +  myScore + " and computer score is " +  comScore)}
+
+        else if (myChoice === "p" && computerChoice === "s") {
+            comScore = comScore + 1
+            alert("You lose, your score is " +  myScore + " and computer score is " +  comScore)}
+
+        else if (myChoice === "p" && computerChoice === "r") {
+            myScore = myScore + 1
+            alert("you win, your score is " +  myScore + " and computer score is " +  comScore)}
+        
+        else {alert("please choose a valid answer")}
+            }
+
+    </script>
+    
+  </body>
+</html>
